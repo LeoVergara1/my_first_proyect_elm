@@ -14,7 +14,7 @@ exports.plugins = {
   elmBrunch: {
     // (required) Set to the elm file(s) containing your "main" function `elm make` 
     //            handles all elm dependencies relative to `elmFolder`
-    mainModules: ['source/path/YourMainModule.elm'],
+    mainModules: ['app/App.elm'],
 
     // (optional) Set to keep an independent elm-stuff folder per mainModule. If 
     //            mainModules is an array, then the 'source/path' of each mainModule 
@@ -23,16 +23,14 @@ exports.plugins = {
     independentModules: true,
 
     // (optional) Set to path where `elm-make` is located, relative to `elmFolder`
-    executablePath: '../../node_modules/elm/binwrappers',
 
     // (optional) Set to path where elm-package.json is located, defaults to project root
     //            if your elm files are not in /app then make sure to configure 
     //            paths.watched in main brunch config
-    elmFolder: 'path/to/elm-files',
 
     // (optional) Defaults to 'js/' folder in paths.public
     // relative to `elmFolder`
-    outputFolder: 'some/path/',
+    outputFolder: 'public/',
 
     // (optional) If specified, all mainModules will be compiled to a single file 
     //            This is merged with outputFolder.
